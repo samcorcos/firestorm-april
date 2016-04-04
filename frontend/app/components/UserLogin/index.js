@@ -4,9 +4,9 @@ import Modal from 'components/Modal'
 import Form from 'components/Form'
 import Button from 'components/Button'
 
-const UserLogin = ({visibility}) => {
+const UserLogin = (props) => {
   return (
-    <Modal visibility={visibility}>
+    <Modal visible={ props.visible } close={ props.close }>
       <Form
         fields={[
           {id: "login-email", type: "email", label: "Email"},
