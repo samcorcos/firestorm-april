@@ -3,6 +3,9 @@ import React from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './styles'
 
+import UserLogin from 'components/UserLogin'
+import UserNew from 'components/UserNew'
+
 const Navbar = () => {
   return (
     <nav styleName="navbar">
@@ -20,6 +23,8 @@ const Navbar = () => {
         <a href="#">Login</a>
         <button>Signup</button>
       </div>
+      <UserLogin visibility={"hidden"} />
+      <UserNew visibility={"visible"} />
     </nav>
   )
 }
