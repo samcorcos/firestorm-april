@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "wdio",
+    "test-integration": "wdio",
+    "test-unit": "./node_modules/.bin/karma start",
     "start": "node server.js",
     "selenium-start": "selenium-standalone start &>/dev/null &",
     "selenium-install": "selenium-standalone install"
@@ -30,7 +31,14 @@
     "style-loader": "^0.13.0",
     "webdriverio": "^3.4.0",
     "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.1"
+    "webpack-dev-server": "^1.12.1",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-cli": "^0.1.2",
+    "karma-mocha": "^0.2.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
+    "react-addons-test-utils": "^0.14.7"
   },
   "dependencies": {
     "react": "^0.14.7",
