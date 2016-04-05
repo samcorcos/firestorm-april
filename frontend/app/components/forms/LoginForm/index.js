@@ -3,6 +3,8 @@ import React from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './styles'
 
+import Button from 'components/Button'
+
 class LoginForm extends React.Component {
   constructor(props) {
     super(props)
@@ -20,6 +22,7 @@ class LoginForm extends React.Component {
             <label htmlFor="signup-password">Password</label>
             <input styleName="input" type="password" id="signup-password" />
           </div>
+          <Button type={"primary"} text={"Submit"} />
         </form>
         <p styleName="switch">Need an account? <a href="#">Sign up</a></p>
       </div>

@@ -1,0 +1,43 @@
+.button {
+  font-size: 1.2em;
+  font-weight: 400;
+  text-decoration: none;
+  border: 0.1rem #FF9800 solid;
+  border-radius: 5px;
+  padding: 1rem 3rem;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flat {
+  composes: button;
+  background: inherit;
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: none;
+  &:hover {
+    background: #FFB74D;
+    border: 1px #FFB74D solid;
+    color: white;
+  }
+}
+
+.primary {
+  composes: button;
+  background: #FF9800;
+  color: white;
+  &:hover {
+    background: #FFB74D;
+    border: 1px #FFB74D solid;
+  }
+}
+
+.disabled {
+  composes: button;
+  color: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.2);
+  pointer-events: none;
+}

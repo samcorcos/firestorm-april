@@ -3,6 +3,8 @@ import React from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './styles'
 
+import Button from 'components/Button'
+
 class SignupForm extends React.Component {
   constructor(props) {
     super(props)
@@ -28,6 +30,7 @@ class SignupForm extends React.Component {
             <label htmlFor="signup-verify-password">Verify Password</label>
             <input styleName="input" type="password" id="signup-verify-password" />
           </div>
+          <Button type={"primary"} text={"Submit"} />
         </form>
         <p styleName="switch">Already have an account? <a href="#">Sign in</a></p>
       </div>
