@@ -3,6 +3,8 @@ import React from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './styles'
 
+import LoginSignupModal from 'components/modals/LoginSignupModal'
+
 const Navbar = () => {
   return (
     <nav styleName="navbar">
@@ -20,6 +22,9 @@ const Navbar = () => {
         <a href="#">Login</a>
         <button>Signup</button>
       </div>
+      <LoginSignupModal
+        isOpen={ true }
+        type={ "signup" }/>
     </nav>
   )
 }
