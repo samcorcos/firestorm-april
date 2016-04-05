@@ -10,22 +10,25 @@ class Navbar extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      loginModal: false,
-      signupModal: false
+      loginModalIsOpen: false,
+      signupModalIsOpen: false
     }
-    this.toggleLoginModal = this.toggleLoginModal.bind(this)
-    this.toggleSignupModal = this.toggleSignupModal.bind(this)
+    this.openLoginModal = this.openLoginModal.bind(this)
+    this.openSignupModal = this.openSignupModal.bind(this)
+    this.closeLoginModal = this.closeLoginModal.bind(this)
+    this.closeSignupModal = this.closeSignupModal.bind(this)
   }
-  toggleLoginModal(visible, e) {
-    e.stopPropagation()
-    this.setState({
-      loginModal: visible ? false : true
-    })
+  openLoginModal() {
+    this.setState({ loginModalIsOpen: true })
   }
-  toggleSignupModal(visible, e) {
-    this.setState({
-      signupModal: visible ? false : true
-    })
+  openSignupModal() {
+    this.setState({ signupModalIsOpen: true })
+  }
+  closeLoginModal() {
+    this.setState({ loginModalIsOpen: false })
+  }
+  closeSignupModal() {
+    this.setState({ signupModalIsOpen: false })
   }
   render() {
     return (
@@ -43,19 +46,19 @@ class Navbar extends React.Component {
         <div styleName="login-container">
           <a href="#"
             id="navbar-login-link"
-            onClick={ this.toggleLoginModal.bind(this, this.state.loginModal) }>
+            onClick={ this.openLoginModal }>
             Login</a>
           <button
             id="navbar-signup-button"
-            onClick={ this.toggleSignupModal.bind(this, this.state.signupModal) }>
+            onClick={ this.openSignupModal }>
             Signup</button>
         </div>
         <UserLogin
-          visible={ this.state.loginModal }
-          close={ this.toggleLoginModal } />
+          isOpen={ this.state.loginModalIsOpen }
+          onRequestClose={ this.closeLoginModal } />
         <UserNew
-          visible={ this.state.signupModal }
-          close={ this.toggleSignupModal } />
+          isOpen={ this.state.signupModalIsOpen }
+          onRequestClose={ this.closeSignupModal } />
       </nav>
     )
   }

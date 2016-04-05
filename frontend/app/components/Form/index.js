@@ -3,7 +3,7 @@ import React from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './styles'
 
-const Form = ({fields}) => {
+const Form = ({fields, children}) => {
   let list = fields.map((field) => {
     return (
       <div styleName="input-group" key={field.id}>
@@ -15,6 +15,7 @@ const Form = ({fields}) => {
   return (
     <form>
       { list }
+      { children }
     </form>
   )
 }
