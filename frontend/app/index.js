@@ -2,13 +2,21 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
+import reset from 'styles/reset'
+
 import Home from 'components/Home'
 import ProfileShow from 'components/ProfileShow'
 import PostShow from 'components/PostShow'
 import PostNew from 'components/PostNew'
+import Navbar from 'components/Navbar'
 
 const App = (props) => {
-  return <div> { props.children } </div>
+  return (
+    <div>
+      <Navbar />
+      { props.children }
+    </div>
+  )
 }
 
 ReactDOM.render(
