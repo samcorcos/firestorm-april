@@ -32,7 +32,12 @@ class SignupForm extends React.Component {
           </div>
           <Button type={"primary"} text={"Submit"} />
         </form>
-        <p styleName="switch">Already have an account? <a href="#">Sign in</a></p>
+        <p styleName="switch">Already have an account?
+          <a href="#"
+            onClick={ this.props.changeLoginSignupForm.bind(this, "login") }>
+            Sign in
+          </a>
+        </p>
       </div>
     )
   }
