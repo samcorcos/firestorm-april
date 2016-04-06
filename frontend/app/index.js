@@ -1,9 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
-import Relay from 'react-relay'
-
-console.log(Relay.QL`query {}`);
 
 import reset from 'styles/reset'
 
