@@ -27,3 +27,16 @@ import_config "#{Mix.env}.exs"
 config :phoenix, :generators,
   migration: true,
   binary_id: false
+
+# Configure
+
+config :ueberauth, Ueberauth,
+  providers: [
+    identity: {Ueberauth.Strategy.Identity, [callback_methods: ["POST"]]}
+  ]
+
+config :guardian, Guardian,
+  issuer: "Firestorm",
+  ttl: { 30, :days },
+  secret_key: "BM0l51fgyDtP7fMSHIjZxTiB9nNbElZVeviAsoOxBO2Sgp0fYhvD3oMOPMPYiGNdW",
+  serializer: Firestorm.GuardianSerializer
