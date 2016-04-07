@@ -3,6 +3,18 @@ var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var autoprefixer = require('autoprefixer')
 
+var babelConfig = {
+  passPerPreset: true,
+  presets:[
+    {
+      "plugins": [path.join(__dirname + "/babelRelayPlugin")]
+    },
+    "react",
+    "es2015",
+    "stage-0"
+  ]
+}
+
 module.exports = {
   devtool: 'eval',
   entry: [
@@ -25,7 +37,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loaders: ['react-hot', 'babel'],
+        loaders: ['react-hot', 'babel?' + JSON.stringify(babelConfig)],
         exclude: /node_modules/,
         include: path.join(__dirname, 'app')
       },
