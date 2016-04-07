@@ -9,7 +9,7 @@ use Mix.Config
 config :firestorm, Firestorm.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
-  secret_key_base: "T8/49eVn+vxIGdKzXBzqXkjR8t6v+tndOnM1ggdMDBIHlJ207A6QLf+65fw7IUgu",
+  secret_key_base: "MOq9ynZLQhE0+cpAG+ACo1SEbjf+69+cFxhg1cyyyeoFX8/JbfVm1QcWYOf1U5RT",
   render_errors: [accepts: ~w(html json)],
   pubsub: [name: Firestorm.PubSub,
            adapter: Phoenix.PubSub.PG2]
@@ -27,15 +27,3 @@ import_config "#{Mix.env}.exs"
 config :phoenix, :generators,
   migration: true,
   binary_id: false
-
-config :ueberauth, Ueberauth,
-  providers: [
-    identity: {Ueberauth.Strategy.Identity, [callback_methods: ["POST"]]}
-  ]
-
-config :guardian, Guardian,
-  issuer: "Firestorm",
-  ttl: {30, :days},
-  secret_key: "T8/49eVn+vxIGdKzXBzqXkjR8t6v+tndOnM1ggdMDBIHlJ207A6QLf+65fw7IUgu",
-  serializer: Firestorm.GuardianSerializer,
-  permissions: %{default: [:read, :write]}
