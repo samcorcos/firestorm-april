@@ -19,8 +19,10 @@ defmodule Firestorm.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", Firestorm do
-  #   pipe_through :api
-  # end
+  scope "/api" do
+    pipe_through :api
+
+    resources "/users", Firestorm.UserController, except: [:new, :edit]
+    # post "/users", Firestorm.UserController, :create
+  end
 end
