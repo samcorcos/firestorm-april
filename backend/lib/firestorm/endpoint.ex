@@ -35,5 +35,6 @@ defmodule Firestorm.Endpoint do
     key: "_firestorm_key",
     signing_salt: "JdblRuDk"
 
-  plug Firestorm.Router
+    plug Corsica, allow_headers: ~w(Content-Type Accept)
+    plug Firestorm.Router
 end

@@ -42,7 +42,7 @@ class SignupForm extends React.Component {
         // password.value = ""
 
         // Save new JWT to localStorage
-        localStorage.phoenix_auth_token = response.data.data.jwt
+        // localStorage.phoenix_auth_token = res.data.data.jwt_token
       })
       .catch(function(err) {
         alert("There was an error creating the user: " + JSON.stringify(err))
