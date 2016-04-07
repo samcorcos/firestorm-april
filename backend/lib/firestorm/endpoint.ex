@@ -33,7 +33,7 @@ defmodule Firestorm.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_firestorm_key",
-    signing_salt: "fAqmpiG7"
+    signing_salt: "JdblRuDk"
 
   plug Firestorm.Router
 end
