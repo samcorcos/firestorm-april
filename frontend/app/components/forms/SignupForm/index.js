@@ -32,12 +32,16 @@ class SignupForm extends React.Component {
           </div>
           <Button type={"primary"} text={"Submit"} />
         </form>
+<<<<<<< HEAD
         <p styleName="switch">Already have an account?&nbsp;
           <a href="#"
             onClick={ this.props.changeLoginSignupForm.bind(this, "login") }>
             Sign in
           </a>
         </p>
+=======
+        <p styleName="switch">Already have an account? <a href="#">Sign in</a></p>
+>>>>>>> parent of a5c0634... triggerign modals refactor
       </div>
     )
   }

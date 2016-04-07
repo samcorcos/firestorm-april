@@ -20,15 +20,7 @@ class LoginSignupModal extends React.Component {
         width: "300px"
       }
     }
-    let form;
-    switch (this.props.type) {
-      case "login":
-        form = <LoginForm changeLoginSignupForm={ this.props.changeLoginSignupForm} />
-        break
-      case "signup":
-        form = <SignupForm changeLoginSignupForm={ this.props.changeLoginSignupForm } />
-        break
-    }
+    let form = this.props.type === "login" ? <LoginForm /> : <SignupForm />
     return (
       <Modal
         isOpen={ this.props.isOpen }
