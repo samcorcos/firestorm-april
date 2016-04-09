@@ -6,9 +6,6 @@ var autoprefixer = require('autoprefixer')
 var babelConfig = {
   passPerPreset: true,
   presets:[
-    {
-      "plugins": [path.join(__dirname + "/babelRelayPlugin")]
-    },
     "react",
     "es2015",
     "stage-0"

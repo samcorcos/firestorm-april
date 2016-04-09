@@ -42,14 +42,12 @@
   },
   "dependencies": {
     "axios": "^0.9.1",
-    "babel-relay-plugin": "^0.7.3",
     "graphql": "^0.4.4",
     "history": "^1.13.0",
     "react": "^0.14.7",
     "react-css-modules": "^3.6.1",
     "react-dom": "^0.14.0",
     "react-modal": "^0.6.1",
-    "react-relay": "^0.3.2",
     "react-router": "^2.0.0-rc5",
     "sync-request": "^2.0.1"
   }

@@ -1,8 +1,8 @@
 import React from 'react'
 import Modal from 'react-modal'
 
-import LoginForm from 'components/forms/LoginForm'
-import SignupForm from 'components/forms/SignupForm'
+import LoginForm from 'components/LoginForm'
+import SignupForm from 'components/SignupForm'
 
 class LoginSignupModal extends React.Component {
   constructor(props) {

@@ -3,7 +3,7 @@ import React from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './styles'
 
-import LoginSignupModal from 'components/modals/LoginSignupModal'
+import LoginSignupModal from 'components/LoginSignupModal'
 
 class Navbar extends React.Component {
   constructor(props) {
